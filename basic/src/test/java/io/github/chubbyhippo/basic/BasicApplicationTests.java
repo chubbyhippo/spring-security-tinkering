@@ -39,4 +39,5 @@ class BasicApplicationTests {
                 .hasContentType("text/plain;charset=UTF-8")
                 .hasBodyTextEqualTo("Hello!");
     }
+
 }

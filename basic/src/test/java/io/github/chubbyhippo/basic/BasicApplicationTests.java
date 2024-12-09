@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.env.Environment;
+import org.springframework.http.HttpStatus;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.servlet.assertj.MockMvcTester;
 
@@ -21,6 +22,16 @@ class BasicApplicationTests {
     private Environment environment;
     @Autowired
     private MockMvcTester mockMvcTester;
+
+    @Test
+    @DisplayName("shouldReturnUnauthorized")
+    void shouldReturnUnauthorized() {
+        mockMvcTester.get()
+                .uri("/hello")
+                .assertThat()
+                .doesNotHaveFailed()
+                .hasStatus(HttpStatus.UNAUTHORIZED);
+    }
 
     @Test
     @DisplayName("should return hello")

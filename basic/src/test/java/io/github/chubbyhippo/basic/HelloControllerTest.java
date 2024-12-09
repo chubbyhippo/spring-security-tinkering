@@ -10,6 +10,7 @@ import org.springframework.test.web.servlet.assertj.MockMvcTester;
 @WebMvcTest
 @WithMockUser
 class HelloControllerTest {
+
     @Autowired
     private MockMvcTester mockMvcTester;
 
@@ -24,4 +25,5 @@ class HelloControllerTest {
                 .hasContentType("text/plain;charset=UTF-8")
                 .hasBodyTextEqualTo("Hello!");
     }
+
 }

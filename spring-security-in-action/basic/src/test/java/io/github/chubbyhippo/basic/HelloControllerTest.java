@@ -9,7 +9,7 @@ import org.springframework.test.web.servlet.assertj.MockMvcTester;
 
 @WebMvcTest
 @WithMockUser
-public class HelloControllerTest {
+class HelloControllerTest {
     @Autowired
     private MockMvcTester mockMvcTester;
 

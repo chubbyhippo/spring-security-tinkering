@@ -22,8 +22,8 @@ public class ProjectConfig {
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
-       return NoOpPasswordEncoder.getInstance();
+    PasswordEncoder passwordEncoder() {
+        return NoOpPasswordEncoder.getInstance();
     }
 
 }

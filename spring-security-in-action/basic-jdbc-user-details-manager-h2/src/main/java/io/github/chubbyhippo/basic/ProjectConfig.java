@@ -16,10 +16,25 @@ import javax.sql.DataSource;
 
 @Configuration
 public class ProjectConfig {
+//    @Bean
+//    UserDetailsService userDetailsService(DataSource dataSource) {
+//        return new JdbcUserDetailsManager(dataSource);
+//
+//    }
 
     @Bean
     UserDetailsService userDetailsService(DataSource dataSource) {
-        return new JdbcUserDetailsManager(dataSource);
+
+        var usersByUsernameQuery =
+                "select username, password, enabled from users where username = ?";
+        var authsByUserQuery =
+                "select username, authority from authorities where username = ?";
+
+        var userDetailsManager = new JdbcUserDetailsManager(dataSource);
+        userDetailsManager.setUsersByUsernameQuery(usersByUsernameQuery);
+        userDetailsManager.setAuthoritiesByUsernameQuery(authsByUserQuery);
+
+        return userDetailsManager;
     }
 
     @Bean

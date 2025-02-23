@@ -1,4 +1,4 @@
-package io.github.chubbyhippo.basic;
+package io.github.chubbyhippo.basic.filters;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;

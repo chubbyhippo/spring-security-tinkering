@@ -12,8 +12,8 @@ import org.springframework.test.web.servlet.assertj.MockMvcTester;
 import java.util.Base64;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-        args = "--spring.security.user.password=password")
-@TestPropertySource(properties = "spring.security.user.name=hello")
+        args = "--spring.security.user.password=12345")
+@TestPropertySource(properties = "spring.security.user.name=matthew")
 @AutoConfigureMockMvc
 class BasicApplicationTests {
 

@@ -1,6 +1,6 @@
 ## current progress
 
-https://livebook.manning.com/book/spring-security-in-action-second-edition/chapter-4
+https://livebook.manning.com/book/spring-security-in-action-second-edition/chapter-5/57
 
 ## contents
 

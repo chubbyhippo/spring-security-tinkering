@@ -11,3 +11,4 @@ https://livebook.manning.com/book/spring-security-in-action-second-edition/chapt
 5. [basic-user-details-service-in-memory](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-user-details-service-in-memory)
 6. [basic-jdbc-user-details-manager-h2](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-jdbc-user-details-manager-h2)
 7. [basic-ldap-user-details-manager-embedded](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-ldap-user-details-manager-embedded)
+8. [basic-custom-filters](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-custom-filters)

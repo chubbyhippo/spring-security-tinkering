@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: basic
+
+logging:
+  level:
+    org:
+      springframework:
+        security: trace

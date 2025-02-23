@@ -14,6 +14,8 @@ public class ProjectConfig {
 
         http.addFilterBefore(new RequestValidationFilter(),
                         BasicAuthenticationFilter.class)
+                .addFilterAfter(new AuthenticationLoggingFilter(),
+                        BasicAuthenticationFilter.class)
                 .authorizeHttpRequests(registry ->
                         registry.anyRequest().permitAll());
 

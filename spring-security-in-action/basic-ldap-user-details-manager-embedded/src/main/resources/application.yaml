@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: basic
+  ldap:
+    embedded:
+      ldif: classpath:server.ldif
+      base-dn: dc=springframework,dc=org
+      port: 33389
+
+logging:
+  level:
+    org:
+      springframework:
+        security: trace

@@ -7,6 +7,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.assertj.MockMvcTester;
 
+import static org.junit.jupiter.api.Assertions.fail;
+
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
 class BasicApplicationTests {
@@ -15,8 +17,20 @@ class BasicApplicationTests {
     private MockMvcTester mockMvcTester;
 
     @Test
+    @DisplayName("should return 401")
+    void shouldReturn401() {
+
+        mockMvcTester.get()
+                .uri("/hello")
+                .assertThat()
+                .hasStatus4xxClientError();
+
+    }
+
+    @Test
     @DisplayName("should return hello")
     void shouldReturnHello() {
+
         mockMvcTester.get()
                 .uri("/hello")
                 .header("Request-Id", "12345")
@@ -25,5 +39,6 @@ class BasicApplicationTests {
                 .doesNotHaveFailed()
                 .hasContentType("text/plain;charset=UTF-8")
                 .hasBodyTextEqualTo("Hello!");
+
     }
 }

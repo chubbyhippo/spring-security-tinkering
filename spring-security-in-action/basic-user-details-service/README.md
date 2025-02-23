@@ -1,7 +1,7 @@
 ## Using curl -u
 
 ```shell
-curl -u mathew:12345 http://localhost:8080/hello
+curl -u matthew:12345 http://localhost:8080/hello
 ```
 
 ## curl -H

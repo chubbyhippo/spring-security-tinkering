@@ -2,42 +2,28 @@ package io.github.chubbyhippo.basic;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.ldap.DefaultLdapUsernameToDnMapper;
+import org.springframework.security.ldap.DefaultSpringSecurityContextSource;
+import org.springframework.security.ldap.userdetails.LdapUserDetailsManager;
 
 @Configuration
 public class ProjectConfig {
 
     @Bean
-    SecurityFilterChain configure(HttpSecurity http) throws Exception {
+    UserDetailsService userDetailsService() {
+        var contextSource =
+                new DefaultSpringSecurityContextSource("ldap://127.0.0.1:33389/dc=springframework,dc=org");
+        contextSource.afterPropertiesSet();
 
-        http.httpBasic(Customizer.withDefaults());
-        http.authorizeHttpRequests(registry ->
-                        registry.anyRequest().authenticated()
-//                        registry.anyRequest().permitAll()
-        );
+        var manager = new LdapUserDetailsManager(contextSource);
+        manager.setUsernameMapper(new DefaultLdapUsernameToDnMapper("ou=groups", "uid"));
+        manager.setGroupSearchBase("ou=groups");
 
-        var user = User.withUsername("matthew")
-                .password("12345")
-                .authorities("read")
-                .build();
-
-        var userDetailsService = new InMemoryUserDetailsManager(user);
-        http.userDetailsService(userDetailsService);
-
-        return http.build();
+        return manager;
     }
-
-//    @Bean
-//    UserDetailsService userDetailsService() {
-//
-//        return new InMemoryUserDetailsManager(user);
-//    }
 
     @Bean
     PasswordEncoder passwordEncoder() {

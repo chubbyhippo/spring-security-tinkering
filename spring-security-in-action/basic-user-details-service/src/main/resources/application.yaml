@@ -1,10 +1,6 @@
 spring:
   application:
     name: basic
-  security:
-    user:
-      name: user
-      password: password
 
 logging:
   level:

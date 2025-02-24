@@ -23,6 +23,14 @@ class BasicApplicationTests {
     private MockMvcTester mockMvcTester;
 
     @Test
+    @DisplayName("should return 400")
+    void shouldReturn400() {
+        mockMvcTester.get()
+                .uri("/hello")
+                .assertThat()
+                .hasStatus4xxClientError();
+    }
+    @Test
     @DisplayName("should return hello")
     void shouldReturnHello() {
         var userName = environment.getProperty("spring.security.user.name");

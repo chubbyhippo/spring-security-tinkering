@@ -1,7 +1,8 @@
 spring:
   application:
     name: basic
-
+authorization:
+  key: authorizationKey
 logging:
   level:
     org:

@@ -18,6 +18,7 @@ class HelloControllerTest {
     void shouldReturnHello() {
         mockMvcTester.get()
                 .uri("/hello")
+                .header("Authorization", "authorizationKey")
                 .assertThat()
                 .hasStatusOk()
                 .doesNotHaveFailed()

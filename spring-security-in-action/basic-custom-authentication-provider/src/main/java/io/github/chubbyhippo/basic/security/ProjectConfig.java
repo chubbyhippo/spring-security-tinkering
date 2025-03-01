@@ -1,4 +1,4 @@
-package io.github.chubbyhippo.basic;
+package io.github.chubbyhippo.basic.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

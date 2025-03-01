@@ -1,5 +1,6 @@
 package io.github.chubbyhippo.basic;
 
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,6 +9,9 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello!";
+        var securityContext = SecurityContextHolder.getContext();
+        var authentication = securityContext.getAuthentication();
+
+        return "Hello, %s".formatted(authentication.getName());
     }
 }

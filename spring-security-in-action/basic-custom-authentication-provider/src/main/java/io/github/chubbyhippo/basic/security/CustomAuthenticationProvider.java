@@ -1,4 +1,4 @@
-package io.github.chubbyhippo.basic;
+package io.github.chubbyhippo.basic.security;
 
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;

@@ -13,3 +13,4 @@ https://livebook.manning.com/book/spring-security-in-action-second-edition/chapt
 7. [basic-ldap-user-details-manager-embedded](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-ldap-user-details-manager-embedded)
 8. [custom-filters](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/custom-filters) Request, Logging
 9. [custom-filters-static-key-authentication-filter](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/custom-filters-static-key-authentication-filter)
+10. [custom-filters-once-per-request-filter](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/custom-filters-once-per-request-filter)

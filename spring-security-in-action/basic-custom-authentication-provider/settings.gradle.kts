@@ -1,1 +1,1 @@
-rootProject.name = "basic-authentication-provider"
+rootProject.name = "basic-custom-authentication-provider"

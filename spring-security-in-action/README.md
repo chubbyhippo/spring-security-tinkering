@@ -15,3 +15,4 @@ https://livebook.manning.com/book/spring-security-in-action-second-edition/chapt
 9. [request-id-header-custom-filters-static-key-authentication-filter](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/request-id-header-custom-filters-static-key-authentication-filter)  
 10. [request-id-header-custom-filters-once-per-request-filter](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/request-id-header-custom-filters-once-per-request-filter) OncePerRequestFilter  
 11. [basic-custom-authentication-provider](basic-custom-authentication-provider)  
+12. [basic-security-context-holder-mode-thread-local](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-security-context-holder-mode-thread-local)

@@ -1,8 +1,11 @@
 package io.github.chubbyhippo.basic;
 
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.concurrent.CompletableFuture;
 
 @RestController
 public class HelloController {
@@ -16,7 +19,8 @@ public class HelloController {
 //    }
 
     @GetMapping("/hello")
-    public String hello(Authentication authentication) {
-        return "Hello, %s".formatted(authentication.getName());
+    @Async
+    public CompletableFuture<String> hello(Authentication authentication) {
+        return CompletableFuture.completedFuture("Hello, %s".formatted(authentication.getName()));
     }
 }

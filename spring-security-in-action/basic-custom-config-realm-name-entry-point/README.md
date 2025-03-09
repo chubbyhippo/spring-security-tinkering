@@ -9,3 +9,8 @@ curl -u matthew:12345 http://localhost:8080/hello
 ```shell
 curl -H "Authorization: Basic $(echo -n "matthew:12345" | base64)" localhost:8080/hello
 ```
+
+## show WWW-Authenticate information 
+```shell
+curl -v http://localhost:8080/hello
+```

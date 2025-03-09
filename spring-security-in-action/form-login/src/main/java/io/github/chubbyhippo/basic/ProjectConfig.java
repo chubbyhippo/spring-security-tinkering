@@ -7,11 +7,11 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-public class WebAuthorizationConfig {
+public class ProjectConfig {
 
     @Bean
     SecurityFilterChain configure(HttpSecurity http) throws Exception {
-        http.httpBasic(Customizer.withDefaults());
+        http.formLogin(Customizer.withDefaults());
         http.authorizeHttpRequests(registry ->
                 registry.anyRequest().authenticated());
 

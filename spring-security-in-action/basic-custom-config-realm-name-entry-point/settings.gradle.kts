@@ -1,1 +1,1 @@
-rootProject.name = "basic-custom-config-realm-name-entry-point"
+rootProject.name = "basic-custom-config-realm-name"

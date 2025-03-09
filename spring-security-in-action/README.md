@@ -11,10 +11,12 @@ https://livebook.manning.com/book/spring-security-in-action-second-edition/chapt
 5. [basic-user-details-service-in-memory](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-user-details-service-in-memory)
 6. [basic-jdbc-user-details-manager-h2](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-jdbc-user-details-manager-h2)
 7. [basic-ldap-user-details-manager-embedded](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-ldap-user-details-manager-embedded)
-8. [request-id-header-custom-filters](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/request-id-header-custom-filters) Request, Logging
-9. [request-id-header-custom-filters-static-key-authentication-filter](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/request-id-header-custom-filters-static-key-authentication-filter)  
-10. [request-id-header-custom-filters-once-per-request-filter](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/request-id-header-custom-filters-once-per-request-filter) OncePerRequestFilter  
-11. [basic-custom-authentication-provider](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-custom-authentication-provider)  
+8. [request-id-header-custom-filters](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/request-id-header-custom-filters)
+   Request, Logging
+9. [request-id-header-custom-filters-static-key-authentication-filter](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/request-id-header-custom-filters-static-key-authentication-filter)
+10. [request-id-header-custom-filters-once-per-request-filter](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/request-id-header-custom-filters-once-per-request-filter)
+    OncePerRequestFilter
+11. [basic-custom-authentication-provider](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-custom-authentication-provider)
 12. [basic-security-context-holder-mode-thread-local](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-security-context-holder-mode-thread-local)
 13. [basic-security-context-holder-mode-inheritable-thread-local-async](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-security-context-holder-mode-inheritable-thread-local-async)
-14. [basic-custom-config-realm-name-entry-point](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-custom-config-realm-name-entry-point)
+14. [basic-custom-config-realm-name](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-custom-config-realm-name)

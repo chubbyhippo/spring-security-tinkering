@@ -10,7 +10,10 @@ public class ProjectConfig {
 
     @Bean
     SecurityFilterChain configure(HttpSecurity http) throws Exception {
-        http.httpBasic(configurer -> configurer.realmName("CustomRealm"));
+        http.httpBasic(configurer -> {
+            configurer.realmName("CustomRealm");
+            configurer.authenticationEntryPoint(new CustomEntryPoint());
+        });
         http.authorizeHttpRequests(registry -> registry.anyRequest().authenticated());
         return http.build();
     }

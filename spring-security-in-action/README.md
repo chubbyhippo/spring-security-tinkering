@@ -21,3 +21,4 @@ https://livebook.manning.com/book/spring-security-in-action-second-edition/chapt
 13. [basic-security-context-holder-mode-inheritable-thread-local-async](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-security-context-holder-mode-inheritable-thread-local-async)
 14. [basic-custom-config-realm-name](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-custom-config-realm-name)
 15. [basic-custom-config-realm-name-authentication-entry-point](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-custom-config-realm-name-authentication-entry-point) customize the response for a failed authentication
+16. [form-login](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/form-login)

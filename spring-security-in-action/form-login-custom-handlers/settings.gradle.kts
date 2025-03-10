@@ -1,1 +1,1 @@
-rootProject.name = "form-login"
+rootProject.name = "form-login-custom-handlers"

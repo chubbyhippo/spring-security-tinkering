@@ -14,14 +14,12 @@ class HelloControllerTest {
     private MockMvcTester mockMvcTester;
 
     @Test
-    @DisplayName("should return hello")
+    @DisplayName("should return home")
     void shouldReturnHello() {
         mockMvcTester.get()
-                .uri("/hello")
+                .uri("/home")
                 .assertThat()
                 .hasStatusOk()
-                .doesNotHaveFailed()
-                .hasContentType("text/plain;charset=UTF-8")
-                .hasBodyTextEqualTo("Hello!");
+                .hasViewName("home.html");
     }
 }

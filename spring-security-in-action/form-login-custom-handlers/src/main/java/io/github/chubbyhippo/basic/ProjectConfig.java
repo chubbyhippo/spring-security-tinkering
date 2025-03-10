@@ -21,6 +21,7 @@ public class ProjectConfig {
         http.formLogin(configurer ->
                 configurer.successHandler(customAuthenticationSuccessHandler)
                         .failureHandler(customAuthenticationFailureHandler));
+        http.httpBasic(Customizer.withDefaults());
         http.authorizeHttpRequests(registry ->
                 registry.anyRequest().authenticated());
 

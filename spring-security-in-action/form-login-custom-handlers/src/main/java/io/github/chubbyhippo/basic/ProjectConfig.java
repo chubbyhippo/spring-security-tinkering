@@ -8,10 +8,19 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class ProjectConfig {
+    private final CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
+    private final CustomAuthenticationFailureHandler customAuthenticationFailureHandler;
+
+    public ProjectConfig(CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler, CustomAuthenticationFailureHandler customAuthenticationFailureHandler) {
+        this.customAuthenticationSuccessHandler = customAuthenticationSuccessHandler;
+        this.customAuthenticationFailureHandler = customAuthenticationFailureHandler;
+    }
 
     @Bean
     SecurityFilterChain configure(HttpSecurity http) throws Exception {
-        http.formLogin(Customizer.withDefaults());
+        http.formLogin(configurer ->
+                configurer.successHandler(customAuthenticationSuccessHandler)
+                        .failureHandler(customAuthenticationFailureHandler));
         http.authorizeHttpRequests(registry ->
                 registry.anyRequest().authenticated());
 

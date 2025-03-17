@@ -44,6 +44,7 @@ public class ProjectConfig {
         http.httpBasic(Customizer.withDefaults());
         http.authorizeHttpRequests(registry ->
                 registry.anyRequest()
+//                        .permitAll()
 //                        .hasAuthority("WRITE")
                         .hasAnyAuthority("READ", "WRITE")
         );

@@ -47,7 +47,8 @@ public class ProjectConfig {
         http.authorizeHttpRequests(registry ->
                 registry.anyRequest()
                         .access(new WebExpressionAuthorizationManager("""
-                                hasAuthority("WRITE") 
+                                hasAuthority("read") and
+                                !hasAuthority("delete") 
                                 """))
         );
         return http.build();

@@ -24,3 +24,4 @@ https://livebook.manning.com/book/spring-security-in-action-second-edition/chapt
 16. [form-login](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/form-login)
 17. [form-login-custom-handlers](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/form-login-custom-handlers)
 18. [basic-user-details-service-granted-authority](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-user-details-service-granted-authority)
+19. [basic-user-details-service-granted-authority-access](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-user-details-service-granted-authority-access)

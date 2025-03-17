@@ -12,7 +12,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 public class ProjectConfig {
 
     @Bean
-    public UserDetailsService userDetailsService() {
+    UserDetailsService userDetailsService() {
         var manager = new InMemoryUserDetailsManager();
 
         var user1 = User.withUsername("matthew")
@@ -35,5 +35,6 @@ public class ProjectConfig {
     PasswordEncoder passwordEncoder() {
         return NoOpPasswordEncoder.getInstance();
     }
+
 
 }

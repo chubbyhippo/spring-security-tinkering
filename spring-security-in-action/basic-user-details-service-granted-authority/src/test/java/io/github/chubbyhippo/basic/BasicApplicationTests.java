@@ -28,7 +28,7 @@ class BasicApplicationTests {
     @Test
     @DisplayName("should return hello")
     void shouldReturnHello() {
-        var username = "matthew";
+        var username = "mark";
         var password = "12345";
 
         var base64 = Base64.getEncoder()

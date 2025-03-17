@@ -45,13 +45,10 @@ public class ProjectConfig {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.httpBasic(Customizer.withDefaults());
         http.authorizeHttpRequests(registry ->
-                        registry.anyRequest()
-//                        .permitAll()
-//                        .hasAuthority("WRITE")
-//                        .hasAnyAuthority("READ", "WRITE")
-                                .access(new WebExpressionAuthorizationManager("""
-                                        hasAuthority("WRITE") 
-                                        """))
+                registry.anyRequest()
+                        .access(new WebExpressionAuthorizationManager("""
+                                hasAuthority("WRITE") 
+                                """))
         );
         return http.build();
     }

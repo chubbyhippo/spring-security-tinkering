@@ -28,7 +28,7 @@ class BasicApplicationTests {
 
     @Test
     @DisplayName("should return 400 with read permission")
-    @WithUserDetails("matthew")
+    @WithUserDetails("mark")
     void shouldReturn400WithReadPermission() {
         mockMvcTester.get()
                 .uri("/hello")
@@ -39,7 +39,7 @@ class BasicApplicationTests {
     @Test
     @DisplayName("should return hello")
     void shouldReturnHello() {
-        var username = "mark";
+        var username = "matthew";
         var password = "12345";
 
         var base64 = Base64.getEncoder()

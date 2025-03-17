@@ -22,12 +22,12 @@ public class ProjectConfig {
 
         var user1 = User.withUsername("matthew")
                 .password("12345")
-                .authorities("READ")
+                .authorities("read")
                 .build();
 
         var user2 = User.withUsername("mark")
                 .password("12345")
-                .authorities("WRITE")
+                .authorities("read", "write", "delete")
                 .build();
 
         manager.createUser(user1);

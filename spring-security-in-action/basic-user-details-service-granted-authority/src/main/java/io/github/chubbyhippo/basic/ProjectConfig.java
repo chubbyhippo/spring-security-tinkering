@@ -2,6 +2,7 @@ package io.github.chubbyhippo.basic;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authorization.AuthenticatedAuthorizationManager;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
@@ -10,6 +11,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.access.expression.WebExpressionAuthorizationManager;
 
 @Configuration
 public class ProjectConfig {
@@ -43,10 +45,13 @@ public class ProjectConfig {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.httpBasic(Customizer.withDefaults());
         http.authorizeHttpRequests(registry ->
-                registry.anyRequest()
+                        registry.anyRequest()
 //                        .permitAll()
 //                        .hasAuthority("WRITE")
-                        .hasAnyAuthority("READ", "WRITE")
+//                        .hasAnyAuthority("READ", "WRITE")
+                                .access(new WebExpressionAuthorizationManager("""
+                                        hasAuthority("WRITE") 
+                                        """))
         );
         return http.build();
     }

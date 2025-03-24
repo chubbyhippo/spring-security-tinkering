@@ -45,10 +45,7 @@ public class ProjectConfig {
         http.httpBasic(Customizer.withDefaults());
         http.authorizeHttpRequests(registry ->
                 registry.anyRequest()
-                        .access(new WebExpressionAuthorizationManager("""
-                                hasAuthority("read") and
-                                !hasAuthority("delete") 
-                                """))
+                        .hasRole("ADMIN")
         );
         return http.build();
     }

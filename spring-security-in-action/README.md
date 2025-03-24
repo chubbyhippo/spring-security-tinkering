@@ -1,7 +1,6 @@
 ## current progress
 
-https://livebook.manning.com/book/spring-security-in-action-second-edition/chapter-7/86
-
+https://livebook.manning.com/book/spring-security-in-action-second-edition/chapter-7/91
 ## contents
 
 1. [basic](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic)

@@ -46,7 +46,9 @@ public class ProjectConfig {
         http.authorizeHttpRequests(registry ->
                 registry.anyRequest()
                         // allow only after 12:00 pm
-                        .access(T(java.time.LocalTime).now().isAfter(T(java.time.LocalTime).of(12, 0)))
+                        .access(new WebExpressionAuthorizationManager("""
+                                T(java.time.LocalTime).now().isAfter(T(java.time.LocalTime).of(12, 0))
+                                """))
         );
         return http.build();
     }

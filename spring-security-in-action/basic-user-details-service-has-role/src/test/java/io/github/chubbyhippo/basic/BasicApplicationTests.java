@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.test.context.support.WithUserDetails;
 import org.springframework.test.web.servlet.assertj.MockMvcTester;
 
@@ -27,13 +28,23 @@ class BasicApplicationTests {
     }
 
     @Test
-    @DisplayName("should return 400 with read permission")
+    @DisplayName("should return forbidden with not admin permission")
     @WithUserDetails("mark")
-    void shouldReturn400WithReadPermission() {
+    void shouldReturnForbiddenWithNotAdminPermission() {
         mockMvcTester.get()
                 .uri("/hello")
                 .assertThat()
-                .hasStatus4xxClientError();
+                .hasStatus(HttpStatus.FORBIDDEN);
+    }
+
+    @Test
+    @DisplayName("should return 200 with admin")
+    @WithUserDetails("matthew")
+    void shouldReturn200WithAdmin() {
+        mockMvcTester.get()
+                .uri("/hello")
+                .assertThat()
+                .hasStatusOk();
     }
 
     @Test

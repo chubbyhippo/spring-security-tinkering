@@ -1,1 +1,0 @@
-rootProject.name = "basic-user-details-service-has-role"

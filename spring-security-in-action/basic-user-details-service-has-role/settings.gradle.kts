@@ -1,1 +1,1 @@
-rootProject.name = "basic-user-details-service-granted-authority-has-role"
+rootProject.name = "basic-user-details-service-has-role"

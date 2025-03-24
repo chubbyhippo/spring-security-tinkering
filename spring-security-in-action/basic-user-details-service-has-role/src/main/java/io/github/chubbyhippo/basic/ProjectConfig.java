@@ -26,7 +26,7 @@ public class ProjectConfig {
 
         var user2 = User.withUsername("mark")
                 .password("12345")
-                .roles("USER")
+                .roles("MANAGER", "USER")
                 .build();
 
         manager.createUser(user1);

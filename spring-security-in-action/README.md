@@ -24,3 +24,4 @@ https://livebook.manning.com/book/spring-security-in-action-second-edition/chapt
 18. [basic-user-details-service-granted-authority](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-user-details-service-granted-authority) hasAuthority and hasAnyAuthority
 19. [basic-user-details-service-granted-authority-access](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-user-details-service-granted-authority-access)
 20. [basic-user-details-service-granted-authority-has-role](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-user-details-service-granted-authority-has-role) hasRole
+21. [basic-user-details-service-deny-all](https://github.com/chubbyhippo/spring-security-tinkering/tree/main/spring-security-in-action/basic-user-details-service-deny-all) hasRole

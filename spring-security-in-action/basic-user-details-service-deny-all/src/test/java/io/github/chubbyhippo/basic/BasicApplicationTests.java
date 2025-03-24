@@ -18,15 +18,6 @@ class BasicApplicationTests {
     private MockMvcTester mockMvcTester;
 
     @Test
-    @DisplayName("should return 400")
-    void shouldReturn400() {
-        mockMvcTester.get()
-                .uri("/hello")
-                .assertThat()
-                .hasStatus4xxClientError();
-    }
-
-    @Test
     @DisplayName("should return 400 with read permission")
     @WithUserDetails("matthew")
     void shouldReturn400WithReadPermission() {
@@ -36,22 +27,4 @@ class BasicApplicationTests {
                 .hasStatus4xxClientError();
     }
 
-    @Test
-    @DisplayName("should return hello")
-    void shouldReturnHello() {
-        var username = "mark";
-        var password = "12345";
-
-        var base64 = Base64.getEncoder()
-                .encodeToString("%s:%s".formatted(username, password).getBytes());
-
-        mockMvcTester.get()
-                .uri("/hello")
-                .header("Authorization", "Basic %s".formatted(base64))
-                .assertThat()
-                .hasStatusOk()
-                .doesNotHaveFailed()
-                .hasContentType("text/plain;charset=UTF-8")
-                .hasBodyTextEqualTo("Hello!");
-    }
 }

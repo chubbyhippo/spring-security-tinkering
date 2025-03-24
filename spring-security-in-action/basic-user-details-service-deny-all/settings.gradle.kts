@@ -1,1 +1,1 @@
-rootProject.name = "basic-user-details-service-granted-authority"
+rootProject.name = "basic-user-details-service-deny-all"

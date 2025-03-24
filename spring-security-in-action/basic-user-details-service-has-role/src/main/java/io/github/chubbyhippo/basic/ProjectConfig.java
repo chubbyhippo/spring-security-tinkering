@@ -21,12 +21,12 @@ public class ProjectConfig {
 
         var user1 = User.withUsername("matthew")
                 .password("12345")
-                .authorities("read")
+                .roles("ADMIN")
                 .build();
 
         var user2 = User.withUsername("mark")
                 .password("12345")
-                .authorities("read", "write", "delete")
+                .roles("USER")
                 .build();
 
         manager.createUser(user1);
